@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#071521" />
+  <title>Night Run: Aurora Express</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game"></canvas>
+    <div class="grain"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><b>NIGHT RUN</b><small>FIELD OPERATION 07</small></div></div>
+      <div class="route"><span>FROSTLINE</span><i></i><span>ENGINE</span></div>
+      <button id="sound" class="icon-btn" aria-label="Toggle sound">♫</button>
+    </header>
+    <section class="mission-card" id="mission-card">
+      <div class="eyebrow"><span class="live-dot"></span> LIVE OPERATION <span class="divider">/</span> 02:40 UNTIL DAWN</div>
+      <h1>THE AURORA<br/><em>EXPRESS</em></h1>
+      <p>Three cipher cores. One moving train.<br/>Make the engine before the border.</p>
+      <button id="start" class="primary-btn">BOARD THE TRAIN <span>→</span></button>
+      <div class="card-foot"><span>WASD / ARROWS TO MOVE</span><span>SPACE TO VAULT</span></div>
+    </section>
+    <section class="hud hidden" id="hud">
+      <div class="objective"><div class="objective-label">OBJECTIVE <span id="distance">100 M</span></div><div class="objective-main"><span class="target-icon">◈</span><span id="objective-text">Recover cipher cores</span></div><div class="core-row" id="cores"><i></i><i></i><i></i></div></div>
+      <div class="alert-wrap"><span>SECURITY</span><div class="alert-track"><i id="alert-fill"></i></div><span id="alert-label">CLEAR</span></div>
+      <div class="pulse-meter"><div class="pulse-icon">ϟ</div><div><span>POLARITY PULSE</span><b id="pulse-count">02 <small>CHARGES</small></b></div><kbd>E</kbd></div>
+      <div class="hint" id="hint">▸ PULSE THE MAG-LOCK TO BREAK THROUGH</div>
+    </section>
+    <div class="controls hidden" id="touch-controls">
+      <div class="dpad"><button data-key="w">▲</button><div><button data-key="a">◀</button><button data-key="s">▼</button><button data-key="d">▶</button></div></div>
+      <div class="action-pad"><button id="touch-pulse">ϟ</button><button id="touch-jump">↟</button></div>
+    </div>
+    <div class="toast hidden" id="toast"></div>
+    <section class="end-card hidden" id="end-card"><div class="end-kicker" id="end-kicker">MISSION COMPLETE</div><h2 id="end-title">Clean getaway.</h2><p id="end-copy">The border is behind you.</p><button id="restart" class="primary-btn">RUN IT AGAIN <span>↻</span></button></section>
+    <footer class="bottom-note"><span>◉ &nbsp; NORTHBOUND · 84 KM/H</span><span>ARCTIC SECTOR <i>°</i> −18</span></footer>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
